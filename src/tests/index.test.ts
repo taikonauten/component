@@ -164,7 +164,7 @@ describe('Component', () => {
     it('should initialize the configuration when calling setup', done => {
       const overrideConfig: ComponentSystemConfiguration = {
         namespace: '__SampleNamespace'
-      }
+      };
 
       setup(overrideConfig);
 

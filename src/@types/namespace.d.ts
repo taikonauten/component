@@ -1,4 +1,5 @@
-import { CachedClasses, CachedRefs, ComponentLib } from 'src';
+
+import type { CachedClasses, CachedRefs, ComponentLib } from 'src';
 
 export declare global {
   /** Taikonauten namespace */

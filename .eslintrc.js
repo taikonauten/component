@@ -7,7 +7,7 @@ module.exports = {
     'eslint:recommended',
     './node_modules/@taikonauten/linters-js/eslint/index.js',
   ],
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
@@ -40,6 +40,14 @@ module.exports = {
       ],
       rules: {
         '@typescript-eslint/ban-ts-comment': 'warn'
+      }
+    },
+    {
+      files: [
+        '**/tests/**/*.ts'
+      ],
+      rules: {
+        'no-console': 'warn'
       }
     }
   ],

@@ -21,7 +21,7 @@ export type ComponentLib = {
 };
 
 export type CachedClasses = {
-  [index: string]: Component;
+  [index: string]: ComponentType;
 };
 
 export type CachedRefs = {
@@ -47,7 +47,7 @@ export function setup(configuration: ComponentSystemConfiguration): void {
 
   if (!window[DEFAULT_SETTINGS.namespace]?.__component) {
     __DEBUG__ && console.info(`creating namespace window.${DEFAULT_SETTINGS.namespace}`);
-  
+
     window[DEFAULT_SETTINGS.namespace] = {
       __component: {
         classes: {}
@@ -113,7 +113,6 @@ export class Component {
  * @param Class - component class
  */
 export function registerClass(identifier: string, Class: ComponentType): void {
-  // @ts-ignore
   window[DEFAULT_SETTINGS.namespace].__component.classes[identifier] = Class;
 }
 
@@ -123,8 +122,7 @@ export function registerClass(identifier: string, Class: ComponentType): void {
  * @return Class for the given identifier or undefined
  */
 export function getClass(identifier: string): ComponentType {
-  // @ts-ignore
-  const Class = window[DEFAULT_SETTINGS.namespace].__component.classes[identifier] as ComponentType;
+  const Class = window[DEFAULT_SETTINGS.namespace].__component.classes[identifier];
 
   if (!Class) {
     __DEBUG__ && console.info(`cached Class for identifier: ${identifier} not found.`);
