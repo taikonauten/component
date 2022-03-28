@@ -5,27 +5,23 @@ export const selector = '[taiko-component="test-component"]';
 class TestComponent extends Component {
 
   constructor(el: Element) {
-
     super(el);
 
     this.init();
   }
 
-  init() {
-
+  init(): void {
     console.log('component: init()');
   }
 
-  reload() {
-
+  reload(): void {
     console.log('component: reload()');
 
     this.destroy();
     this.init();
   }
 
-  destroy() {
-
+  destroy(): void {
     console.log('component: destroy()');
   }
 }
