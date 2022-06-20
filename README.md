@@ -5,6 +5,8 @@
 
 <h1 align="center">Taikonauten component</h1>
 
+[![Tests](https://github.com/taikonauten/component/actions/workflows/test.yml/badge.svg)](https://github.com/taikonauten/component/actions/workflows/test.yml)
+
 Lightweight JavaScript and TypeScript component library to handle component lifecycle.
 
 ## Installation
