@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import {Component} from '../../index';
 
 export const selector = '[taiko-component="test-component"]';
