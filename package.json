@@ -1,7 +1,7 @@
 {
   "name": "@taikonauten/component",
   "description": "Lightweight JavaScript and TypeScript component library to handle component lifecycle.",
-  "version": "2.3.9",
+  "version": "2.3.10",
   "license": "MIT",
   "main": "index.js",
   "types": "index.d.ts",
