@@ -1,7 +1,8 @@
+
 const webpack = require('webpack');
+const karma = require('karma');
 
-module.exports = (config: any) => {
-
+module.exports = (config) => {
   config.set({
     frameworks: ['mocha', 'chai', 'webpack'],
     plugins: [
@@ -17,7 +18,7 @@ module.exports = (config: any) => {
     reporters: ['progress'],
     port: 9876, // karma web server port
     colors: true,
-    logLevel: config.LOG_INFO,
+    logLevel: karma.LOG_INFO,
     browsers: ['ChromeHeadless'],
     autoWatch: false,
     singleRun: true, // Karma captures browsers, runs the tests and exits
@@ -42,10 +43,11 @@ module.exports = (config: any) => {
         ]
       },
       plugins: [
+        // @ts-ignore
         new webpack.DefinePlugin({
           __DEBUG__: true,
         }),
       ],
     },
-  })
-}
+  });
+};
